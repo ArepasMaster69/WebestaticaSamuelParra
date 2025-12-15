@@ -3,7 +3,7 @@ const mensaje = document.getElementById('mensaje');
 
 
 const mensajes = [
-    '¡Bienvenido a mi página web!',
+    '¡Bienvenido a mi página esta muy chula!',
     '¡Gracias por visitarme!',
     '¡Espero que tengas un gran día!',
     '¡Hola! Encantado de verte por aquí.'
