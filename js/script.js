@@ -7,14 +7,14 @@ boton.addEventListener('click', () => {
 
     if (nombreUsuario.trim() === "") {
         mensajeSalida.textContent = "¡Por favor, escribe algo en la caja!";
-        mensajeSalida.style.color = "red"; // Cambio temporal de color a rojo
+        mensajeSalida.style.color = "red";
         return;
     }
 
 
     const nombreProcesado = nombreUsuario.toUpperCase();
 
-    mensajeSalida.style.color = "#064E3B"; // Restaurar tu color verde oscuro original
+    mensajeSalida.style.color = "#064E3B";
     mensajeSalida.textContent = `¡Hola, ${nombreProcesado}! Bienvenido a la web de Samuel.`;
 
     inputNombre.value = "";
