@@ -1,19 +1,21 @@
-const boton = document.getElementById('cambiarMensaje');
-const mensaje = document.getElementById('mensaje');
-
-
-const mensajes = [
-    '¡Bienvenido a mi página esta muy chula!',
-    '¡Gracias por visitarme!',
-    '¡Espero que tengas un gran día!',
-    '¡Hola! Encantado de verte por aquí.'
-];
-
-
-let indice = 0;
-
+const inputNombre = document.getElementById('nombreInput');
+const boton = document.getElementById('btnProcesar');
+const mensajeSalida = document.getElementById('mensaje');
 
 boton.addEventListener('click', () => {
-    indice = (indice + 1) % mensajes.length;
-    mensaje.textContent = mensajes[indice];
+    const nombreUsuario = inputNombre.value;
+
+    if (nombreUsuario.trim() === "") {
+        mensajeSalida.textContent = "¡Por favor, escribe algo en la caja!";
+        mensajeSalida.style.color = "red"; // Cambio temporal de color a rojo
+        return;
+    }
+
+
+    const nombreProcesado = nombreUsuario.toUpperCase();
+
+    mensajeSalida.style.color = "#064E3B"; // Restaurar tu color verde oscuro original
+    mensajeSalida.textContent = `¡Hola, ${nombreProcesado}! Bienvenido a la web de Samuel.`;
+
+    inputNombre.value = "";
 });

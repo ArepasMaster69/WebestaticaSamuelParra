@@ -4,17 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a la Pagina Web de Samuel Parra</title>
+    <title>Pagina Web de Samuel Parra</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <main class="container">
-        <h1> Pagina Web de Samuel, Bienvenido</h1>
-        <p id="mensaje">¡Bienvenido a mi página web es chevere!</p>
-        <button id="cambiarMensaje">Cambio de texto</button>
-    </main>
+        <img src="imagenes/avatar.jpg" alt="Avatar de Samuel" class="mi-imagen">
 
+        <h1>Página Web de Samuel</h1>
+
+        <p>Introduce tu nombre para recibir un saludo personalizado:</p>
+
+        <div class="formulario">
+            <input type="text" id="nombreInput" placeholder="Escribe aquí...">
+            <button id="btnProcesar">Enviar</button>
+        </div>
+
+        <p id="mensaje">Esperando datos...</p>
+    </main>
 
     <script src="js/script.js"></script>
 </body>
