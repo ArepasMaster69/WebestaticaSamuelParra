@@ -1,19 +1,15 @@
 <?php
-// Configuración de la base de datos (Paso B5)
 $host = "localhost";
 $user = "admin_web";
-$pass = "TuPasswordSegura"; // Cambia por la contraseña que pusiste en el paso B5
+$pass = "TuPasswordSegura"; 
 $db   = "mi_proyecto";
 
-// Crear conexión
 $conn = new mysqli($host, $user, $pass, $db);
 
-// Comprobar conexión
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 
-// Lógica para el formulario (Paso C7)
 $mensaje = "";
 $estiloColor = "";
 
@@ -24,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensaje = "¡Por favor, escribe algo!";
         $estiloColor = "color: red;"; 
     } else {
-        // Insertar el nombre en la base de datos
         $stmt = $conn->prepare("INSERT INTO usuarios (nombre) VALUES (?)");
         $stmt->bind_param("s", $nombreUsuario);
         $stmt->execute();
@@ -35,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Consultar todos los usuarios para mostrarlos (Paso B4/C7)
 $sql = "SELECT nombre FROM usuarios";
 $resultado = $conn->query($sql);
 ?>
